@@ -9,3 +9,23 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 20151005130930) do
+
+  create_table "allocation_weights", force: true do |t|
+    t.integer  "asset_class_id"
+    t.integer  "tolerance_level"
+    t.decimal  "weight",          precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "allocation_weights", ["asset_class_id"], name: "index_allocation_weights_on_asset_class_id", using: :btree
+
+  create_table "asset_classes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+end
