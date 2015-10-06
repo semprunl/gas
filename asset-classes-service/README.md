@@ -1,3 +1,5 @@
-# Welcome to Napa
+## Asset Classes
+Manages all the different asset classes and their properties such as portfolio allocation weights by investment tolerance level.
 
-TODO: Add an awesome README that explains how all this stuff works!
+####Available operations
+* CRUD for Asset Class model and their associate allocation weights
