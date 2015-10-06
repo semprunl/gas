@@ -1,4 +1,4 @@
 class AllocationWeightRepresenter < Napa::Representer
-  property :id, type: String
-
+  property :tolerance_level
+  property :weight
 end
