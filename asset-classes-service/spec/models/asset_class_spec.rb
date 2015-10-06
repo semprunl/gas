@@ -7,8 +7,13 @@ describe AssetClass do
     expect(asset_class).to_not be_nil
   end
 
-  it 'needs tests to be written!' do
-    pending('write tests for AssetClass!')
+  it 'is invalid without a name' do
+    expect(build(:asset_class, name: nil)).to be_invalid
+  end
+
+  it 'is invalid with a duplicate name' do
+    ac = create :asset_class
+    expect(build(:asset_class, name: ac.name)).to be_invalid
   end
 
 end
